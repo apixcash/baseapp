@@ -97,22 +97,6 @@ class Landing extends React.Component<Props> {
                             <MarketsTable />
                         </div>
                     </div>
-                    <div className="pg-landing-screen__platform-info">
-                        <div className="pg-landing-screen__platform-info__wrap">
-                            <div className="pg-landing-screen__platform-info__wrap__item">
-                                <span>{this.translate('page.body.landing.platformInfo.item.first.value')}</span>
-                                <span>{this.translate('page.body.landing.platformInfo.item.first.title')}</span>
-                            </div>
-                            <div className="pg-landing-screen__platform-info__wrap__item">
-                                <span>{this.translate('page.body.landing.platformInfo.item.second.value')}</span>
-                                <span>{this.translate('page.body.landing.platformInfo.item.second.title')}</span>
-                            </div>
-                            <div className="pg-landing-screen__platform-info__wrap__item">
-                                <span>{this.translate('page.body.landing.platformInfo.item.third.value')}</span>
-                                <span>{this.translate('page.body.landing.platformInfo.item.third.title')}</span>
-                            </div>
-                        </div>
-                    </div>
                 </LandingBlock>
                 <LandingBlock
                     className="pg-landing-screen__register"
@@ -186,35 +170,6 @@ class Landing extends React.Component<Props> {
                         </div>
                     </div>
                 </LandingBlock>
-                <LandingBlock
-                    className="pg-landing-screen__trade-on-the-go"
-                    contentClassName="pg-landing-screen__trade-on-the-go-content">
-                    <div className="pg-landing-screen__trade-on-the-go__wrap">
-                        <div className="pg-landing-screen__trade-on-the-go__wrap__image" />
-                        <div className="pg-landing-screen__trade-on-the-go__wrap__content">
-                            <h1>{this.translate('page.body.landing.tradeOnTheGo.item.title')}</h1>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text1')}</h2>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text2')}</h2>
-                            <h2>{this.translate('page.body.landing.tradeOnTheGo.item.text3')}</h2>
-                            <Link to="/trading/" className="landing-button">
-                                {this.translate('page.body.landing.tradeOnTheGo.item.button')}
-                            </Link>
-                        </div>
-                    </div>
-                </LandingBlock>
-                <div className="pg-landing-screen__start-trading">
-                    <div className="pg-landing-screen__start-trading__wrap">
-                        <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
-                        <div className="pg-landing-screen__start-trading__wrap__content">
-                            <Link to="/signup" className="landing-button">
-                                {this.translate('page.body.landing.startTrading.button1')}
-                            </Link>
-                            <Link to="/trading/" className="landing-button landing-button--secondary">
-                                {this.translate('page.body.landing.startTrading.button2')}
-                            </Link>
-                        </div>
-                    </div>
-                </div>
                 <div className="pg-landing-screen__footer">
                     <div className="pg-landing-screen__footer__wrap">
                         <div className="pg-landing-screen__footer__wrap__left" onClick={(e) => this.handleScrollTop()}>
@@ -227,26 +182,23 @@ class Landing extends React.Component<Props> {
                                 <Link to="/">{this.translate('page.body.landing.footer.fees')}</Link>
                             </div>
                             <div className="pg-landing-screen__footer__wrap__navigation__col">
-                                <Link to="/">{this.translate('page.body.landing.footer.faq')}</Link>
-                                <Link to="/">{this.translate('page.body.landing.footer.support')}</Link>
-                                <Link to="/">{this.translate('page.body.landing.footer.privacy')}</Link>
+                                <Link to="/faq">{this.translate('page.body.landing.footer.faq')}</Link>
+                                <Link to="/support">{this.translate('page.body.landing.footer.support')}</Link>
+                                <Link to="/privacy">{this.translate('page.body.landing.footer.privacy')}</Link>
                             </div>
                             <div className="pg-landing-screen__footer__wrap__navigation__col">
-                                <Link to="/">{this.translate('page.body.landing.footer.about')}</Link>
-                                <Link to="/">{this.translate('page.body.landing.footer.community')}</Link>
-                                <Link to="/">{this.translate('page.body.landing.footer.info')}</Link>
+                                <Link to="/about">{this.translate('page.body.landing.footer.about')}</Link>
+                                <Link to="https://discord.gg/U7A2xE74At">{this.translate('page.body.landing.footer.community')}</Link>
+                                <Link to="#">{this.translate('page.body.landing.footer.info')}</Link>
                             </div>
                         </div>
                         <div className="pg-landing-screen__footer__wrap__social">
                             <div className="pg-landing-screen__footer__wrap__social__row">
-                                <img src={TelegramIcon} alt="Telegram" />
-                                <img src={LinkedInIcon} alt="LinkedIn" />
-                                <img src={TwitterIcon} alt="Twitter" />
+                                <a href="https://twitter.com/apixcash"><img src={TwitterIcon} alt="Twitter" /></a>
                                 <img src={YouTubeIcon} alt="YouTube" />
                             </div>
                             <div className="pg-landing-screen__footer__wrap__social__row">
-                                <img src={RedditIcon} alt="Reddit" />
-                                <img src={FacebookIcon} alt="Facebook" />
+                                <a href="https://www.reddit.com/r/apixcash/"><img src={RedditIcon} alt="Reddit" /></a>
                                 <img src={MediumIcon} alt="MediumIcon" />
                                 <img src={CoinMarketIcon} alt="CoinMarket" />
                             </div>

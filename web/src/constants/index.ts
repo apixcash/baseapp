@@ -2,7 +2,7 @@ import { CanCan } from "src/containers";
 import { AbilitiesInterface, Wallet } from "src/modules";
 import { DropdownElem } from "../components/Order";
 
-export const PG_TITLE_PREFIX = "Cryptobase";
+export const PG_TITLE_PREFIX = "APIX Exchange";
 
 export const pgRoutes = (isLoggedIn: boolean, abilities: AbilitiesInterface, isLight?: boolean): string[][] => {
     const routes = [
@@ -47,8 +47,8 @@ export const DEFAULT_WALLET: Wallet = {
 export const DEFAULT_CCY_PRECISION = 4;
 export const DEFAULT_FIAT_PRECISION = 2;
 export const DEFAULT_TRADING_VIEW_INTERVAL = "15";
-export const VALUATION_PRIMARY_CURRENCY = "USD";
-export const VALUATION_SECONDARY_CURRENCY = "ETH";
+export const VALUATION_PRIMARY_CURRENCY = "APIX";
+export const VALUATION_SECONDARY_CURRENCY = "LTC";
 
 export const PASSWORD_ENTROPY_STEP = 6;
 
